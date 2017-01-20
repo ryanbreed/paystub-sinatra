@@ -1,0 +1,2 @@
+#!/bin/bash
+strace -D -f -ttt -C -S calls -s 128 -I 1 -o tmp/paystub.strace.$$ bundle exec rackup -p 8000 -o 0.0.0.0

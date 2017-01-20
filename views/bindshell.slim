@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title Ruby Bindshell
+  body
+    h1 Bindshell Status
+    table
+      tr
+        th status 
+        - if child != nil
+          td running (pid: #{child})
+        - else
+          td dormant 
+          a href='/ruby-bind?runit=true' start
+      tr
+        th port
+        td.port = payload_options['port']
+      tr
+        th host
+        td.host = payload_options['host']
+    
+    h3  Bindshell Usage
+    dl
+      dt port
+      dd local port number (default=4444)
+      dt host
+      dd bind host (default=0.0.0.0)
